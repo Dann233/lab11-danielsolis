@@ -1,6 +1,5 @@
 :host {
   display: block;
-  /* Ocupa las 2 columnas del grid del dashboard */
   grid-column: 1 / -1;
   font-family: 'Orbitron', 'Segoe UI', sans-serif;
   font-weight: 900;

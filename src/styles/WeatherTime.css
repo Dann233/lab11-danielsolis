@@ -1,36 +1,36 @@
 :host {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.4rem;
   background: var(--weather-bg, #1e3a2f);
   border-radius: 0.75rem;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .ciudad {
   color: var(--weather-texto, #86efac);
-  font-size: 0.85rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .temperatura {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 900;
 }
 
 .condicion {
   color: var(--weather-texto, #86efac);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
-/* Estado de carga */
 .loading {
-  --size: 12px;
+  --size: 14px;
   width: var(--size);
   height: var(--size);
   background: var(--weather-texto, #86efac);

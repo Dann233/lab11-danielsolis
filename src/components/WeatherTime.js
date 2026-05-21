@@ -4,23 +4,20 @@ const DEFAULT_CITY = "liberia+guanacaste";
 
 class WeatherTime extends HTMLElement {
 
-  // Propiedad publica: datos del clima
   data = {};
 
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.adoptedStyleSheets.push(styles);
-    this.#fetchWeather(); // inicia fetch desde el constructor
+    this.#fetchWeather();
   }
 
   connectedCallback() {
-    // Leer atributo ciudad como propiedad JS
     this.city = this.getAttribute("city") ?? DEFAULT_CITY;
-    this.render(); // muestra loading mientras llegan los datos
+    this.render(); 
   }
 
-  // Metodo privado: fetch de datos del clima
   async #fetchWeather() {
     const city = (this.getAttribute("city") ?? DEFAULT_CITY)
       .toLowerCase().replace(" ", "+");
@@ -29,18 +26,15 @@ class WeatherTime extends HTMLElement {
     this.render();
   }
 
-  // Getter: temperatura limpia
   get temperature() {
     return this.data?.temperature;
   }
 
-  // Getter: condicion limpia
   get description() {
     return this.data?.description;
   }
 
   render() {
-    // Mientras no haya datos, muestra animacion de carga
     if (!this.temperature) {
       this.shadowRoot.setHTMLUnsafe(/* html */`
         <span class="ciudad">${this.city ?? "..."}</span>

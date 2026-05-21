@@ -13,19 +13,16 @@ class UserCard extends HTMLElement {
   }
 
   connectedCallback() {
-    // Leer atributos y guardar como propiedades JS
     this.name   = this.getAttribute("name")   ?? DEFAULT_NAME;
     this.role   = this.getAttribute("role")   ?? DEFAULT_ROLE;
     this.avatar = this.getAttribute("avatar") ?? DEFAULT_AVATAR;
     this.render();
   }
 
-  // Metodo privado: dispara un CustomEvent que burbujea por el DOM
-  // El user-dashboard lo escucha y activa el pulsing del warning-badge
   #saludar() {
     const event = new CustomEvent("usercard:saludar", {
-      bubbles: true,   // burbujea por el DOM
-      composed: true   // atraviesa el Shadow DOM
+      bubbles: true,   
+      composed: true   
     });
     this.dispatchEvent(event);
   }
@@ -42,7 +39,6 @@ class UserCard extends HTMLElement {
       </div>
     `);
 
-    // Escuchar el click del boton con querySelector sobre shadowRoot
     this.shadowRoot.querySelector("button")
       .addEventListener("click", () => this.#saludar());
   }

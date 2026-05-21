@@ -11,43 +11,40 @@ body {
   align-items: center;
   background: #0f172a;
   font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
 }
 
-/* Variables CSS hacia user-dashboard (atraviesan Shadow DOM) */
 user-dashboard {
-  --dashboard-bg:     #1e293b;
-  --dashboard-borde:  #334155;
-  --dashboard-radio:  1rem;
+  --dashboard-bg:    #1e293b;
+  --dashboard-borde: #334155;
+  --dashboard-radio: 1rem;
 }
 
-/* Variables CSS hacia user-card */
 user-card {
   --card-bg:     #273549;
   --card-texto:  #e2e8f0;
   --card-acento: #38bdf8;
 }
 
-/* Variables CSS hacia weather-time */
 weather-time {
   --weather-bg:    #1e3a2f;
   --weather-texto: #86efac;
 }
 
-/* Variables CSS hacia warning-badge */
 warning-badge {
   --badge-color: #FFE000;
   --badge-glow:  rgb(100% 90% 0% / 25%);
 }
 
-/* CSS Parts expuestos por cada componente */
 user-card::part(boton) {
   cursor: pointer;
   background: #38bdf8;
   color: #0f172a;
   border: none;
-  padding: 6px 16px;
+  padding: 8px 24px;
   border-radius: 6px;
   font-weight: 700;
+  font-size: 1rem;
   transition: background 0.2s;
 }
 
@@ -57,7 +54,7 @@ user-card::part(boton):hover {
 
 user-card::part(avatar) {
   border-radius: 50%;
-  width: 72px;
-  height: 72px;
-  border: 2px solid #38bdf8;
+  width: 96px;
+  height: 96px;
+  border: 3px solid #38bdf8;
 }

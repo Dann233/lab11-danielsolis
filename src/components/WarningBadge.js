@@ -2,7 +2,6 @@ import styles from "../styles/WarningBadge.css" with { type: "css" };
 
 class WarningBadge extends HTMLElement {
 
-  // Atributos observados para reactividad
   static get observedAttributes() {
     return ["pulsing"];
   }
@@ -17,7 +16,6 @@ class WarningBadge extends HTMLElement {
     this.render();
   }
 
-  // Reactividad: se dispara cuando cambia el atributo "pulsing"
   attributeChangedCallback(name, old, now) {
     if (old !== now) this.render();
   }

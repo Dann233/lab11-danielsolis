@@ -13,8 +13,6 @@ class UserDashboard extends HTMLElement {
     this.#escucharSaludo();
   }
 
-  // Escucha el evento que dispara user-card al hacer click en Saludar
-  // Cuando lo recibe, activa el atributo pulsing en warning-badge (reactividad)
   #escucharSaludo() {
     this.addEventListener("usercard:saludar", () => {
       const badge = this.querySelector("warning-badge");
