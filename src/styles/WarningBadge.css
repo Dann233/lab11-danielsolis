@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  /* Ocupa las 2 columnas del grid del dashboard */
+  grid-column: 1 / -1;
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  font-weight: 900;
+  color: var(--badge-color, #FFE000);
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--badge-color, #FFE000);
+  background: transparent;
+}
+
+:host([pulsing]) {
+  animation: pulso 1.2s infinite alternate;
+  box-shadow: 0 0 18px var(--badge-glow, rgb(100% 90% 0% / 25%));
+}
+
+@keyframes pulso {
+  0%   { opacity: 1; box-shadow: 0 0 8px var(--badge-glow); }
+  100% { opacity: 0.5; box-shadow: 0 0 28px var(--badge-glow); }
+}
+
+::slotted(*) {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}

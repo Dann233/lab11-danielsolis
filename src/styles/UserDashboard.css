@@ -1,0 +1,22 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--dashboard-bg, #1e293b);
+  border: 1px solid var(--dashboard-borde, #334155);
+  border-radius: var(--dashboard-radio, 1rem);
+  width: fit-content;
+}
+
+/* user-card y weather-time llenan su celda */
+::slotted(user-card),
+::slotted(weather-time) {
+  height: 100%;
+}
+
+/* warning-badge ocupa las 2 columnas */
+::slotted(warning-badge) {
+  grid-column: 1 / -1;
+}
