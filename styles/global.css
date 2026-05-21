@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+}
+
+user-dashboard {
+  --dashboard-bg:    #1e293b;
+  --dashboard-borde: #334155;
+  --dashboard-radio: 1rem;
+}
+
+user-card {
+  --card-bg:     #273549;
+  --card-texto:  #e2e8f0;
+  --card-acento: #38bdf8;
+}
+
+weather-time {
+  --weather-bg:    #1e3a2f;
+  --weather-texto: #86efac;
+}
+
+warning-badge {
+  --badge-color: #FFE000;
+  --badge-glow:  rgb(100% 90% 0% / 25%);
+}
+
+user-card::part(boton) {
+  cursor: pointer;
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+user-card::part(boton):hover {
+  background: #7dd3fc;
+}
+
+user-card::part(avatar) {
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  border: 3px solid #38bdf8;
+}
