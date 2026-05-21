@@ -1,4 +1,4 @@
-import "./Components/UserDashboard.js";
-import "./Components/UserCard.js";
-import "./Components/WeatherTime.js";
-import "./Components/WarningBadge.js";
+import "./components/UserDashboard.js";
+import "./components/UserCard.js";
+import "./components/WeatherTime.js";
+import "./components/WarningBadge.js";
