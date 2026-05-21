@@ -13,7 +13,6 @@
   gap: 1rem;
 }
 
-/* En pantallas pequeñas, una sola columna */
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: 1fr;
